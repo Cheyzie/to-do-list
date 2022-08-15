@@ -12,6 +12,8 @@ struct ListGreeter: View {
     var body: some View {
         VStack {
             Image("avatar")
+                .resizable()
+                .frame(width: 80, height: 80)
                 .clipShape(Circle())
             Text("Hey, Cheyzie!")
                 .font(.custom("WorkSans-SemiBold", size: 24))
@@ -27,5 +29,6 @@ struct ListGreeter: View {
 struct ListGreeter_Previews: PreviewProvider {
     static var previews: some View {
         ListGreeter()
+            .environmentObject(ToDoListViewModel())
     }
 }

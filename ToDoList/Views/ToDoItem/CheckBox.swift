@@ -9,11 +9,11 @@ import SwiftUI
 
 struct CheckBox: View {
     var isChecked: Bool
-    var onClick: (() -> Void)?
+    var toggle: (() -> Void)?
     
     var body: some View {
         Button() {
-            onClick?()
+            toggle?()
         } label: {
             Checkmark()
                 .stroke(lineWidth: 1.5)
@@ -37,6 +37,6 @@ struct CheckBox: View {
 struct CheckBox_Previews: PreviewProvider {
     
     static var previews: some View {
-        CheckBox(isChecked: false) {print(1)}
+        CheckBox(isChecked: false) 
     }
 }

@@ -9,16 +9,21 @@ import Foundation
 import Combine
 import CoreData
 
-class ToDoStorage: NSObject, ObservableObject {
-    var toDoItems = CurrentValueSubject<[ToDoEntity], Never>([])
+class ToDoDataService: NSObject, ToDoDataServiceProtocol, ObservableObject {
+    
+    private(set) var toDoItems = CurrentValueSubject<[ToDoEntity], Never>([])
     private let toDoFetchController: NSFetchedResultsController<ToDoEntity>
-    let context = PersistenceController.shared.container.viewContext
-    static let shared = ToDoStorage()
+    private let context = PersistenceController.shared.container.viewContext
+    
+    static let shared = ToDoDataService()
+    
+    private var cancellable = Set<AnyCancellable>()
     
     private override init() {
         let request = ToDoEntity.fetchRequest()
         let sort = NSSortDescriptor(key: "createdAt", ascending: false)
         request.sortDescriptors = [sort]
+        
         toDoFetchController = NSFetchedResultsController(
             fetchRequest: request,
             managedObjectContext: context,
@@ -69,7 +74,7 @@ class ToDoStorage: NSObject, ObservableObject {
     }
 }
 
-extension ToDoStorage: NSFetchedResultsControllerDelegate {
+extension ToDoDataService: NSFetchedResultsControllerDelegate {
     public func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         guard let toDoItems = controller.fetchedObjects as? [ToDoEntity] else { return }
         self.toDoItems.value = toDoItems

@@ -14,14 +14,14 @@ struct ToDoList: View {
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             VStack {
-                ListHeader()
+                ListHeader(searchQuery: $viewModel.searchQuery)
                 ListGreeter()
                     .environmentObject(viewModel)
                 
                 RoundedRectangle(cornerRadius: 1)
                     .foregroundColor(Color("Haiti"))
                     .opacity(0.25)
-                    .frame(height: 1)
+                    .frame(height: 2)
                     .padding(.horizontal, 16)
                 
                 ScrollViewReader { list in
@@ -32,7 +32,7 @@ struct ToDoList: View {
                             }
                                 .transition(.move(edge: .trailing))
                         }
-                        ForEach(viewModel.toDoItems, id: \.id) { toDo in
+                        ForEach(viewModel.filteredToDoItems, id: \.id) { toDo in
                             ToDoItem(toDo: toDo)
                                 .environmentObject(viewModel)
                                 .frame(height: 50, alignment: .leading)
@@ -63,7 +63,6 @@ struct ToDoList: View {
                     }
                     
             }
-            .hoverEffect(.lift)
             .padding()
         }
     }

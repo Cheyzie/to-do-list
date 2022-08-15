@@ -32,7 +32,7 @@ struct ToDoItem: View {
             }
             HStack {
                 CheckBox(isChecked: toDo.isDone){
-                    viewModel.toggleToDo(toDo: toDo)
+                    viewModel.toggle(toDo: toDo)
                 }
                     .padding(.leading)
                 Text(toDo.text ?? "")

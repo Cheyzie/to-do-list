@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E0C42C928A56FCD00E03EE8 /* ToDoStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C42C828A56FCD00E03EE8 /* ToDoStorage.swift */; };
+		7E0C42C928A56FCD00E03EE8 /* ToDoDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C42C828A56FCD00E03EE8 /* ToDoDataService.swift */; };
 		7E0C42CC28A57DA600E03EE8 /* ToDoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C42CB28A57DA600E03EE8 /* ToDoListViewModel.swift */; };
+		7E0C42D028AA755100E03EE8 /* ToDoDataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C42CF28AA755100E03EE8 /* ToDoDataServiceProtocol.swift */; };
 		7E5287E2289D991F003FFB1D /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5287E1289D991F003FFB1D /* ToDoItem.swift */; };
 		7E5287E4289DA0E4003FFB1D /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5287E3289DA0E4003FFB1D /* ToDoList.swift */; };
 		7E5287EC28A122F9003FFB1D /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5287EB28A122F9003FFB1D /* CheckBox.swift */; };
@@ -29,8 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7E0C42C828A56FCD00E03EE8 /* ToDoStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoStorage.swift; sourceTree = "<group>"; };
+		7E0C42C828A56FCD00E03EE8 /* ToDoDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDataService.swift; sourceTree = "<group>"; };
 		7E0C42CB28A57DA600E03EE8 /* ToDoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewModel.swift; sourceTree = "<group>"; };
+		7E0C42CF28AA755100E03EE8 /* ToDoDataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDataServiceProtocol.swift; sourceTree = "<group>"; };
 		7E5287E1289D991F003FFB1D /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		7E5287E3289DA0E4003FFB1D /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
 		7E5287EB28A122F9003FFB1D /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
@@ -71,13 +73,30 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		7E5287E5289DA0EB003FFB1D /* Model */ = {
+		7E0C42CD28AA4A7A00E03EE8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				7E0C42C828A56FCD00E03EE8 /* ToDoStorage.swift */,
+				7E0C42CE28AA751C00E03EE8 /* ToDoDataService */,
 				7E962B47289D3EFE008941C8 /* Persistence.swift */,
 			);
-			path = Model;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7E0C42CE28AA751C00E03EE8 /* ToDoDataService */ = {
+			isa = PBXGroup;
+			children = (
+				7E0C42C828A56FCD00E03EE8 /* ToDoDataService.swift */,
+				7E0C42CF28AA755100E03EE8 /* ToDoDataServiceProtocol.swift */,
+			);
+			path = ToDoDataService;
+			sourceTree = "<group>";
+		};
+		7E5287E5289DA0EB003FFB1D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7E962B49289D3EFE008941C8 /* ToDoList.xcdatamodeld */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		7E5287EA28A1135C003FFB1D /* ToDoItem */ = {
@@ -139,13 +158,13 @@
 			isa = PBXGroup;
 			children = (
 				7E5287FB28A17FD7003FFB1D /* Info.plist */,
+				7E0C42CD28AA4A7A00E03EE8 /* Services */,
 				7E962B3E289D3EF9008941C8 /* ToDoListApp.swift */,
 				7E0C42CA28A57D6D00E03EE8 /* ViewModel */,
 				7E5287F428A17F26003FFB1D /* Fonts */,
-				7E5287E5289DA0EB003FFB1D /* Model */,
+				7E5287E5289DA0EB003FFB1D /* Models */,
 				7E962B51289D4454008941C8 /* Views */,
 				7E962B42289D3EFE008941C8 /* Assets.xcassets */,
-				7E962B49289D3EFE008941C8 /* ToDoList.xcdatamodeld */,
 				7E962B44289D3EFE008941C8 /* Preview Content */,
 			);
 			path = ToDoList;
@@ -244,8 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E0C42CC28A57DA600E03EE8 /* ToDoListViewModel.swift in Sources */,
-				7E0C42C928A56FCD00E03EE8 /* ToDoStorage.swift in Sources */,
+				7E0C42C928A56FCD00E03EE8 /* ToDoDataService.swift in Sources */,
 				7E962B48289D3EFE008941C8 /* Persistence.swift in Sources */,
+				7E0C42D028AA755100E03EE8 /* ToDoDataServiceProtocol.swift in Sources */,
 				7E5287EE28A129CF003FFB1D /* Checkmark.swift in Sources */,
 				7E52880228A2629C003FFB1D /* CreateItem.swift in Sources */,
 				7E5287EC28A122F9003FFB1D /* CheckBox.swift in Sources */,

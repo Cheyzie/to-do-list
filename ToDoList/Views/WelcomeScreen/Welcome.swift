@@ -15,8 +15,9 @@ struct Welcome: View {
                     Circle()
                         .frame(width: 2 * geometry.size.width, height: 2 * geometry.size.width)
                         .foregroundColor(Color("Blue"))
-                        .position(x: 0.3 * geometry.size.width, y: -0.5 * geometry.size.width)
+                        .position(x: 0.25 * geometry.size.width, y: -0.35 * geometry.size.width)
                     VStack {
+                        Spacer()
                         Image("Welcome")
                             .resizable()
                             .frame(width: 0.45 * geometry.size.width, height: 0.45 * geometry.size.width)
@@ -34,6 +35,7 @@ struct Welcome: View {
                             .foregroundColor(Color("Grey"))
                             .multilineTextAlignment(.center)
                             .padding(.top, 0.5)
+                        Spacer()
                         NavigationLink {
                             ToDoList()
                                 .navigationBarHidden(true)
@@ -52,6 +54,7 @@ struct Welcome: View {
                     }
                     .padding(.horizontal, 3)
                 }
+                .ignoresSafeArea()
             }
         }
         .navigationBarHidden(true)
