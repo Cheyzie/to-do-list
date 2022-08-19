@@ -49,7 +49,7 @@ struct Welcome: View {
                                     }
                             }
                             NavigationLink {
-                                ToDoList()
+                                SignUp()
                                     .navigationBarHidden(true)
                             } label: {
                                 Text("Sign Up")
