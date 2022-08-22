@@ -71,7 +71,6 @@ struct Welcome: View {
                 .ignoresSafeArea()
             }
         }
-        .navigationBarHidden(true)
     }
 }
 

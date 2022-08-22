@@ -55,7 +55,6 @@ struct SignUp: View {
                                 .shadow(radius: 5)
                         }
                 }
-                .navigationBarHidden(true)
                 .padding(.vertical, 30)
                 HStack {
                     Text("Don't have an account?")
@@ -63,23 +62,26 @@ struct SignUp: View {
                         .foregroundColor(Color("Grey"))
                     NavigationLink {
                         SignIn()
+                            .navigationBarHidden(true)
                     } label: {
                         Text("Login")
                             .font(.custom("WorkSans-SemiBold", size: 12))
                             .foregroundColor(Color("Blue"))
                     }
-                    .navigationBarHidden(true)
                 }
                 NavigationLink(
                     isActive: $viewModel.isAuth,
-                    destination: {ToDoList()},
+                    destination: {
+                        ToDoList()
+                            .navigationBarHidden(true)
+                        
+                    },
                     label: {}
                 )
                 Spacer()
             }
             .padding()
         }
-        .navigationBarHidden(true)
     }
 }
 

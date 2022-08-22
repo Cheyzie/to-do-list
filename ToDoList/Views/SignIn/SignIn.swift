@@ -55,16 +55,19 @@ struct SignIn: View {
                         .foregroundColor(Color("LightGrey"))
                     NavigationLink {
                         SignUp()
+                            .navigationBarHidden(true)
                     } label: {
                         Text("Register now")
                             .font(.custom("WorkSans-SemiBold", size: 12))
                             .foregroundColor(.white)
                     }
-                    .navigationBarHidden(true)
                 }
                 NavigationLink(
                     isActive: $viewModel.login,
-                    destination: {ToDoList()},
+                    destination: {
+                        ToDoList()
+                            .navigationBarHidden(true)
+                    },
                     label: {}
                 )
                 Spacer()
@@ -79,7 +82,6 @@ struct SignIn: View {
                     .foregroundColor(Color("Blue"))
             }
         }
-        .navigationBarHidden(true)
     }
 }
 

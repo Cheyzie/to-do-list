@@ -79,14 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7E0C42CA28A57D6D00E03EE8 /* ViewModel */ = {
+		7E0C42CA28A57D6D00E03EE8 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				7E0C42CB28A57DA600E03EE8 /* ToDoListViewModel.swift */,
 				7EB99A7E28AFEE5200C542E6 /* SignUpViewModel.swift */,
 				7EB99A8028AFF02400C542E6 /* SignInViewModel.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		7E0C42CD28AA4A7A00E03EE8 /* Services */ = {
@@ -206,12 +206,12 @@
 		7E962B3D289D3EF9008941C8 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				7EB99A7628ABB5C500C542E6 /* Extensions */,
 				7E5287FB28A17FD7003FFB1D /* Info.plist */,
+				7E5287F428A17F26003FFB1D /* Fonts */,
+				7EB99A7628ABB5C500C542E6 /* Extensions */,
 				7E0C42CD28AA4A7A00E03EE8 /* Services */,
 				7E962B3E289D3EF9008941C8 /* ToDoListApp.swift */,
-				7E0C42CA28A57D6D00E03EE8 /* ViewModel */,
-				7E5287F428A17F26003FFB1D /* Fonts */,
+				7E0C42CA28A57D6D00E03EE8 /* ViewModels */,
 				7E5287E5289DA0EB003FFB1D /* Models */,
 				7E962B51289D4454008941C8 /* Views */,
 				7E962B42289D3EFE008941C8 /* Assets.xcassets */,
