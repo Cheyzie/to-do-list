@@ -15,13 +15,17 @@ struct CustomSecuredField<Content: View>: View {
     
     var body: some View {
         HStack {
-            (isHidden
-            ? AnyView(SecureField("", text: $text))
-            : AnyView(TextField("", text: $text)))
-                .placeholder(
-                    when: text.isEmpty,
-                    placeholder: fieldPlaceholder
-                )
+            Group {
+                if isHidden {
+                    SecureField("", text: $text)
+                } else {
+                    TextField("", text: $text)
+                }
+            }
+            .placeholder(
+                when: text.isEmpty,
+                placeholder: fieldPlaceholder
+            )
             Button {
                 isHidden.toggle()
             } label: {

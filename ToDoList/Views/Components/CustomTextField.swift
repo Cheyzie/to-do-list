@@ -11,6 +11,7 @@ struct CustomTextField<Content: View>: View {
     @Binding var text: String
     
     var fieldPlaceholder: () -> Content
+    
     var body: some View {
         TextField("", text: $text)
             .placeholder(when: text.isEmpty, placeholder: fieldPlaceholder)
