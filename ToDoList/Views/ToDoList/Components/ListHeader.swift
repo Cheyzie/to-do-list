@@ -21,25 +21,25 @@ struct ListHeader: View {
                         showSearchForm.toggle()
                     } label: {
                         Image(systemName: "magnifyingglass")
-                            .foregroundColor(Color("Haiti"))
+                            .foregroundColor(.customHaiti)
                     }
                 } else {
                     HStack {
                         Text(searchQuery)
                             .font(.custom("WorkSans-Medium", size: 24))
-                            .foregroundColor(Color("Grey"))
+                            .foregroundColor(.customGrey)
                         Button {
                             searchQuery = ""
                         } label: {
                             Image(systemName: "plus")
-                                .foregroundColor(Color("Red"))
+                                .foregroundColor(.customRed)
                                 .rotationEffect(.degrees(45))
                         }
                     }
                     .padding(.horizontal)
                     .background {
                         RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(Color("LightGrey"))
+                            .foregroundColor(.customLightGrey)
                     }
                 }
             } else {
@@ -55,13 +55,13 @@ struct ListHeader: View {
                         showSearchForm.toggle()
                     } label: {
                         Image(systemName: "plus")
-                            .foregroundColor(Color("Red"))
+                            .foregroundColor(.customRed)
                             .rotationEffect(.degrees(45))
                     }
                 }
                 .background {
                     RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(Color("LightGrey"))
+                        .foregroundColor(.customLightGrey)
                 }
             }
         }

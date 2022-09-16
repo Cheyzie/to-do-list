@@ -20,25 +20,25 @@ struct SignUp: View {
                 CustomTextField(text: $viewModel.email) {
                         HStack {
                             Image("Message")
-                                .foregroundColor(Color("Blue"))
+                                .foregroundColor(.customBlue)
                             Text("Email")
-                                .foregroundColor(Color("Haiti"))
+                                .foregroundColor(.customHaiti)
                         }
                     }
                 CustomSecuredField(text: $viewModel.password) {
                         HStack {
                             Image("Lock")
-                                .foregroundColor(Color("Blue"))
+                                .foregroundColor(.customBlue)
                             Text("Password")
-                                .foregroundColor(Color("Haiti"))
+                                .foregroundColor(.customHaiti)
                         }
                     }
                 CustomSecuredField(text: $viewModel.passwordConfirmation) {
                         HStack {
                             Image("Lock")
-                                .foregroundColor(Color("Blue"))
+                                .foregroundColor(.customBlue)
                             Text("Confirm Password")
-                                .foregroundColor(Color("Haiti"))
+                                .foregroundColor(.customHaiti)
                         }
                     }
                 
@@ -51,7 +51,7 @@ struct SignUp: View {
                         .frame(width: 200, height: 50)
                         .background {
                             RoundedRectangle(cornerRadius: 25)
-                                .foregroundColor(Color("Blue"))
+                                .foregroundColor(.customBlue)
                                 .shadow(radius: 5)
                         }
                 }
@@ -59,14 +59,14 @@ struct SignUp: View {
                 HStack {
                     Text("Don't have an account?")
                         .font(.custom("WorkSans-SemiBold", size: 12))
-                        .foregroundColor(Color("Grey"))
+                        .foregroundColor(.customGrey)
                     NavigationLink {
                         SignIn()
                             .navigationBarHidden(true)
                     } label: {
                         Text("Login")
                             .font(.custom("WorkSans-SemiBold", size: 12))
-                            .foregroundColor(Color("Blue"))
+                            .foregroundColor(.customBlue)
                     }
                 }
                 NavigationLink(

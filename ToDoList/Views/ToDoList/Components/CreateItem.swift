@@ -16,7 +16,7 @@ struct CreateItem: View {
             CheckBox(isChecked: false)
             TextField("Title", text: $text)
                 .font(.custom("WorkSans-Medium", size: 20))
-                .foregroundColor(Color("Haiti"))
+                .foregroundColor(.customHaiti)
                 .onSubmit {
                     if !text.isEmpty {
                         onCreate?(text)

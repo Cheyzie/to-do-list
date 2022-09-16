@@ -19,7 +19,7 @@ struct ToDoList: View {
                     .environmentObject(viewModel)
                 
                 RoundedRectangle(cornerRadius: 1)
-                    .foregroundColor(Color("Haiti"))
+                    .foregroundColor(.customHaiti)
                     .opacity(0.25)
                     .frame(height: 2)
                     .padding(.horizontal, 16)
@@ -53,13 +53,13 @@ struct ToDoList: View {
                     .aspectRatio(contentMode: .fit)
                     .padding(15)
                     .frame(width: 56, height: 56, alignment: .center)
-                    .foregroundColor(Color("Haiti"))
+                    .foregroundColor(.customHaiti)
                     .rotationEffect(.degrees(showCreateForm ? 45 : 0))
                     .animation(.easeInOut(duration: 0.3), value: showCreateForm)
                     .background {
                         RoundedRectangle(cornerRadius: 28)
                             .shadow(radius: 3)
-                            .foregroundColor(Color("LightGrey"))
+                            .foregroundColor(.customLightGrey)
                     }
                     
             }
