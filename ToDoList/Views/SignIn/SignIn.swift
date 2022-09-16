@@ -22,17 +22,17 @@ struct SignIn: View {
                 CustomTextField(text: $viewModel.email) {
                         HStack {
                             Image("Message")
-                                .foregroundColor(Color("Blue"))
+                                .foregroundColor(.customBlue)
                             Text("Email")
-                                .foregroundColor(Color("Haiti"))
+                                .foregroundColor(.customHaiti)
                         }
                     }
                 CustomSecuredField(text: $viewModel.password) {
                     HStack {
                         Image("Lock")
-                            .foregroundColor(Color("Blue"))
+                            .foregroundColor(.customBlue)
                         Text("Password")
-                            .foregroundColor(Color("Haiti"))
+                            .foregroundColor(.customHaiti)
                     }
                 }
                 Button {
@@ -52,7 +52,7 @@ struct SignIn: View {
                 HStack {
                     Text("Don't have an account?")
                         .font(.custom("WorkSans-SemiBold", size: 12))
-                        .foregroundColor(Color("LightGrey"))
+                        .foregroundColor(.customLightGrey)
                     NavigationLink {
                         SignUp()
                             .navigationBarHidden(true)
@@ -73,13 +73,13 @@ struct SignIn: View {
                 Spacer()
             }
             .frame(maxHeight: .infinity)
-            .foregroundColor(Color("Haiti"))
+            .foregroundColor(.customHaiti)
             .padding(20)
             .background {
                 Rectangle()
                     .ignoresSafeArea()
                     .scaledToFill()
-                    .foregroundColor(Color("Blue"))
+                    .foregroundColor(.customBlue)
             }
         }
     }

@@ -34,6 +34,7 @@
 		7EB99A7C28AE4BE100C542E6 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB99A7B28AE4BE000C542E6 /* CustomTextField.swift */; };
 		7EB99A7F28AFEE5300C542E6 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB99A7E28AFEE5200C542E6 /* SignUpViewModel.swift */; };
 		7EB99A8128AFF02400C542E6 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB99A8028AFF02400C542E6 /* SignInViewModel.swift */; };
+		7EB99A8328D473E800C542E6 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB99A8228D473E800C542E6 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		7EB99A7B28AE4BE000C542E6 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		7EB99A7E28AFEE5200C542E6 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		7EB99A8028AFF02400C542E6 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		7EB99A8228D473E800C542E6 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				7EB99A7728ABB5F400C542E6 /* View.swift */,
+				7EB99A8228D473E800C542E6 /* Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			files = (
 				7E0C42CC28A57DA600E03EE8 /* ToDoListViewModel.swift in Sources */,
 				7E0C42C928A56FCD00E03EE8 /* ToDoDataService.swift in Sources */,
+				7EB99A8328D473E800C542E6 /* Color.swift in Sources */,
 				7E0C42DB28AB976D00E03EE8 /* SignIn.swift in Sources */,
 				7E962B48289D3EFE008941C8 /* Persistence.swift in Sources */,
 				7EB99A7C28AE4BE100C542E6 /* CustomTextField.swift in Sources */,

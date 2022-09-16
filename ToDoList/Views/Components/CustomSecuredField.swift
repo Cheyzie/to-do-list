@@ -30,7 +30,7 @@ struct CustomSecuredField<Content: View>: View {
                 isHidden.toggle()
             } label: {
                 Image(systemName: isHidden ? "eye.slash.fill" : "eye.fill")
-                    .foregroundColor(isHidden ? Color("Grey") : Color("Blue"))
+                    .foregroundColor(isHidden ? .customGrey : .customBlue)
             }
         }
         .padding()

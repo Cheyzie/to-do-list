@@ -17,10 +17,10 @@ struct ListGreeter: View {
                 .clipShape(Circle())
             Text("Hey, Cheyzie!")
                 .font(.custom("WorkSans-SemiBold", size: 24))
-                .foregroundColor(Color("Haiti"))
+                .foregroundColor(.customHaiti)
             Text("\(viewModel.uncompletedTasks) Task\(viewModel.uncompletedTasks == 1 ? "" : "s")")
                 .font(.custom("WorkSans-Medium", size: 16))
-                .foregroundColor(Color("Shadow"))
+                .foregroundColor(.customShadow)
                 .padding(.top, 1)
         }
     }

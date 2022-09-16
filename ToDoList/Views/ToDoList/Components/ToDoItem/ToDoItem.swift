@@ -27,7 +27,7 @@ struct ToDoItem: View {
             }
             .background {
                 Rectangle()
-                    .foregroundColor(Color("Red"))
+                    .foregroundColor(.customRed)
                     .frame(height: 50)
             }
             HStack {
@@ -40,7 +40,7 @@ struct ToDoItem: View {
                         toDo.isDone ? "WorkSans-SemiBold" : "WorkSans-Medium",
                         size: 20)
                     )
-                    .foregroundColor(toDo.isDone ? Color("Green") : Color("Haiti"))
+                    .foregroundColor(toDo.isDone ? .customGreen : .customHaiti)
                     .animation(.easeInOut(duration: 1.5))
                 Spacer()            }
             .background {

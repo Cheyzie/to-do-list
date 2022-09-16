@@ -14,25 +14,25 @@ struct Welcome: View {
                 ZStack {
                     Circle()
                         .frame(width: 2 * geometry.size.width, height: 2 * geometry.size.width)
-                        .foregroundColor(Color("Blue"))
+                        .foregroundColor(.customBlue)
                         .position(x: 0.25 * geometry.size.width, y: -0.35 * geometry.size.width)
                     VStack(alignment: .center) {
                         Image("Welcome")
                             .resizable()
                             .frame(width: 0.45 * geometry.size.width, height: 0.45 * geometry.size.width)
-                            .padding(45)
+                            .padding(0.15 * geometry.size.width)
                             .background {
                                 Circle()
                                     .foregroundColor(.white)
                                     .shadow(radius: 5)
                         }
-                            .padding(.top, 50)
+                            .padding(.top, 30)
                         Text("Start enjoying a more organized life")
                             .font(.custom("WorkSans-Bold", size: 35))
-                            .padding(.vertical, 20)
+                            .padding(.vertical, 10)
                         Text("Plan, organize, track, in one visual, collaborative space")
                             .font(.custom("WorkSans-Medium", size: 20))
-                            .foregroundColor(Color("Grey"))
+                            .foregroundColor(.customGrey)
                             .padding(.vertical, 5)
                         HStack {
                             NavigationLink {
@@ -42,10 +42,10 @@ struct Welcome: View {
                                 Text("Sign In")
                                     .font(.custom("WorkSans-Bold", size: 18))
                                     .foregroundColor(.white)
-                                    .frame(width: 170, height: 55, alignment: .center)
+                                    .frame(width: 0.47 * geometry.size.width, height: 55, alignment: .center)
                                     .background {
                                         RoundedRectangle(cornerRadius: 10)
-                                            .foregroundColor(Color("Blue"))
+                                            .foregroundColor(.customBlue)
                                     }
                             }
                             NavigationLink {
@@ -54,12 +54,12 @@ struct Welcome: View {
                             } label: {
                                 Text("Sign Up")
                                     .font(.custom("WorkSans-Bold", size: 18))
-                                    .foregroundColor(Color("Blue"))
-                                    .frame(width: 170, height: 54, alignment: .center)
+                                    .foregroundColor(.customBlue)
+                                    .frame(width: 0.46 * geometry.size.width, height: 54, alignment: .center)
                                     .background {
                                         RoundedRectangle(cornerRadius: 10)
                                             .stroke(lineWidth: 3)
-                                            .foregroundColor(Color("Blue"))
+                                            .foregroundColor(.customBlue)
                                     }
                             }
                         }

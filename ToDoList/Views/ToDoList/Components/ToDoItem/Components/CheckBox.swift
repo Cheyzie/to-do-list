@@ -28,7 +28,7 @@ struct CheckBox: View {
                 .animation(.easeInOut(duration: 0.5), value: isChecked)
                 .background(
                     RoundedRectangle(cornerRadius: isChecked ? 8 : 6)
-                        .foregroundColor(isChecked ? Color("Green") :  Color("LightGrey"))
+                        .foregroundColor(isChecked ? .customGreen :  .customLightGrey)
                 )
         }
     }
