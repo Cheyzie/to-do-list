@@ -10,6 +10,8 @@
 		7E0C42C928A56FCD00E03EE8 /* ToDoDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C42C828A56FCD00E03EE8 /* ToDoDataService.swift */; };
 		7E0C42CC28A57DA600E03EE8 /* ToDoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C42CB28A57DA600E03EE8 /* ToDoListViewModel.swift */; };
 		7E0C42D028AA755100E03EE8 /* ToDoDataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C42CF28AA755100E03EE8 /* ToDoDataServiceProtocol.swift */; };
+		7E0C42D928AB975900E03EE8 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C42D828AB975900E03EE8 /* SignUp.swift */; };
+		7E0C42DB28AB976D00E03EE8 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C42DA28AB976D00E03EE8 /* SignIn.swift */; };
 		7E5287E2289D991F003FFB1D /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5287E1289D991F003FFB1D /* ToDoItem.swift */; };
 		7E5287E4289DA0E4003FFB1D /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5287E3289DA0E4003FFB1D /* ToDoList.swift */; };
 		7E5287EC28A122F9003FFB1D /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5287EB28A122F9003FFB1D /* CheckBox.swift */; };
@@ -27,12 +29,19 @@
 		7E962B46289D3EFE008941C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E962B45289D3EFE008941C8 /* Preview Assets.xcassets */; };
 		7E962B48289D3EFE008941C8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E962B47289D3EFE008941C8 /* Persistence.swift */; };
 		7E962B4B289D3EFE008941C8 /* ToDoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E962B49289D3EFE008941C8 /* ToDoList.xcdatamodeld */; };
+		7EB99A7828ABB5F400C542E6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB99A7728ABB5F400C542E6 /* View.swift */; };
+		7EB99A7A28ABC64400C542E6 /* CustomSecuredField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB99A7928ABC64400C542E6 /* CustomSecuredField.swift */; };
+		7EB99A7C28AE4BE100C542E6 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB99A7B28AE4BE000C542E6 /* CustomTextField.swift */; };
+		7EB99A7F28AFEE5300C542E6 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB99A7E28AFEE5200C542E6 /* SignUpViewModel.swift */; };
+		7EB99A8128AFF02400C542E6 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB99A8028AFF02400C542E6 /* SignInViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7E0C42C828A56FCD00E03EE8 /* ToDoDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDataService.swift; sourceTree = "<group>"; };
 		7E0C42CB28A57DA600E03EE8 /* ToDoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewModel.swift; sourceTree = "<group>"; };
 		7E0C42CF28AA755100E03EE8 /* ToDoDataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDataServiceProtocol.swift; sourceTree = "<group>"; };
+		7E0C42D828AB975900E03EE8 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		7E0C42DA28AB976D00E03EE8 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		7E5287E1289D991F003FFB1D /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		7E5287E3289DA0E4003FFB1D /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
 		7E5287EB28A122F9003FFB1D /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
@@ -52,6 +61,11 @@
 		7E962B45289D3EFE008941C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7E962B47289D3EFE008941C8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		7E962B4A289D3EFE008941C8 /* ToDoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoList.xcdatamodel; sourceTree = "<group>"; };
+		7EB99A7728ABB5F400C542E6 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		7EB99A7928ABC64400C542E6 /* CustomSecuredField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecuredField.swift; sourceTree = "<group>"; };
+		7EB99A7B28AE4BE000C542E6 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		7EB99A7E28AFEE5200C542E6 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		7EB99A8028AFF02400C542E6 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7E0C42CA28A57D6D00E03EE8 /* ViewModel */ = {
+		7E0C42CA28A57D6D00E03EE8 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				7E0C42CB28A57DA600E03EE8 /* ToDoListViewModel.swift */,
+				7EB99A7E28AFEE5200C542E6 /* SignUpViewModel.swift */,
+				7EB99A8028AFF02400C542E6 /* SignInViewModel.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		7E0C42CD28AA4A7A00E03EE8 /* Services */ = {
@@ -91,6 +107,42 @@
 			path = ToDoDataService;
 			sourceTree = "<group>";
 		};
+		7E0C42D428AB930900E03EE8 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				7E0C42DA28AB976D00E03EE8 /* SignIn.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		7E0C42D528AB932800E03EE8 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				7E0C42D828AB975900E03EE8 /* SignUp.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		7E0C42D628AB967000E03EE8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7E5287F028A17314003FFB1D /* ListGreeter.swift */,
+				7E5287F228A17CDD003FFB1D /* ListHeader.swift */,
+				7E52880128A2629C003FFB1D /* CreateItem.swift */,
+				7E5287EA28A1135C003FFB1D /* ToDoItem */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7E0C42D728AB96B700E03EE8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7E5287EB28A122F9003FFB1D /* CheckBox.swift */,
+				7E5287ED28A129CF003FFB1D /* Checkmark.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		7E5287E5289DA0EB003FFB1D /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,9 +154,8 @@
 		7E5287EA28A1135C003FFB1D /* ToDoItem */ = {
 			isa = PBXGroup;
 			children = (
+				7E0C42D728AB96B700E03EE8 /* Components */,
 				7E5287E1289D991F003FFB1D /* ToDoItem.swift */,
-				7E5287EB28A122F9003FFB1D /* CheckBox.swift */,
-				7E5287ED28A129CF003FFB1D /* Checkmark.swift */,
 			);
 			path = ToDoItem;
 			sourceTree = "<group>";
@@ -112,10 +163,8 @@
 		7E5287EF28A17293003FFB1D /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				7E0C42D628AB967000E03EE8 /* Components */,
 				7E5287E3289DA0E4003FFB1D /* ToDoList.swift */,
-				7E5287F028A17314003FFB1D /* ListGreeter.swift */,
-				7E5287F228A17CDD003FFB1D /* ListHeader.swift */,
-				7E52880128A2629C003FFB1D /* CreateItem.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -158,10 +207,11 @@
 			isa = PBXGroup;
 			children = (
 				7E5287FB28A17FD7003FFB1D /* Info.plist */,
+				7E5287F428A17F26003FFB1D /* Fonts */,
+				7EB99A7628ABB5C500C542E6 /* Extensions */,
 				7E0C42CD28AA4A7A00E03EE8 /* Services */,
 				7E962B3E289D3EF9008941C8 /* ToDoListApp.swift */,
-				7E0C42CA28A57D6D00E03EE8 /* ViewModel */,
-				7E5287F428A17F26003FFB1D /* Fonts */,
+				7E0C42CA28A57D6D00E03EE8 /* ViewModels */,
 				7E5287E5289DA0EB003FFB1D /* Models */,
 				7E962B51289D4454008941C8 /* Views */,
 				7E962B42289D3EFE008941C8 /* Assets.xcassets */,
@@ -182,11 +232,30 @@
 			isa = PBXGroup;
 			children = (
 				7E962B40289D3EF9008941C8 /* ContentView.swift */,
+				7EB99A7D28AE4E0800C542E6 /* Components */,
+				7E0C42D528AB932800E03EE8 /* SignUp */,
+				7E0C42D428AB930900E03EE8 /* SignIn */,
 				7E5287FC28A190AA003FFB1D /* WelcomeScreen */,
-				7E5287EA28A1135C003FFB1D /* ToDoItem */,
 				7E5287EF28A17293003FFB1D /* ToDoList */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7EB99A7628ABB5C500C542E6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7EB99A7728ABB5F400C542E6 /* View.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7EB99A7D28AE4E0800C542E6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7EB99A7B28AE4BE000C542E6 /* CustomTextField.swift */,
+				7EB99A7928ABC64400C542E6 /* CustomSecuredField.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,17 +333,24 @@
 			files = (
 				7E0C42CC28A57DA600E03EE8 /* ToDoListViewModel.swift in Sources */,
 				7E0C42C928A56FCD00E03EE8 /* ToDoDataService.swift in Sources */,
+				7E0C42DB28AB976D00E03EE8 /* SignIn.swift in Sources */,
 				7E962B48289D3EFE008941C8 /* Persistence.swift in Sources */,
+				7EB99A7C28AE4BE100C542E6 /* CustomTextField.swift in Sources */,
 				7E0C42D028AA755100E03EE8 /* ToDoDataServiceProtocol.swift in Sources */,
 				7E5287EE28A129CF003FFB1D /* Checkmark.swift in Sources */,
 				7E52880228A2629C003FFB1D /* CreateItem.swift in Sources */,
+				7EB99A8128AFF02400C542E6 /* SignInViewModel.swift in Sources */,
 				7E5287EC28A122F9003FFB1D /* CheckBox.swift in Sources */,
 				7E5287F328A17CDD003FFB1D /* ListHeader.swift in Sources */,
 				7E5287E4289DA0E4003FFB1D /* ToDoList.swift in Sources */,
 				7E5287FE28A1B105003FFB1D /* Welcome.swift in Sources */,
 				7E962B41289D3EF9008941C8 /* ContentView.swift in Sources */,
+				7EB99A7F28AFEE5300C542E6 /* SignUpViewModel.swift in Sources */,
+				7EB99A7A28ABC64400C542E6 /* CustomSecuredField.swift in Sources */,
 				7E5287F128A17314003FFB1D /* ListGreeter.swift in Sources */,
 				7E5287E2289D991F003FFB1D /* ToDoItem.swift in Sources */,
+				7EB99A7828ABB5F400C542E6 /* View.swift in Sources */,
+				7E0C42D928AB975900E03EE8 /* SignUp.swift in Sources */,
 				7E962B3F289D3EF9008941C8 /* ToDoListApp.swift in Sources */,
 				7E962B4B289D3EFE008941C8 /* ToDoList.xcdatamodeld in Sources */,
 			);
