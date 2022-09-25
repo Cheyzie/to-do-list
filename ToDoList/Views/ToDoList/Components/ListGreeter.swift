@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct ListGreeter: View {
-    @EnvironmentObject var viewModel: ToDoListViewModel
+    @StateObject var viewModel = ListGreeterViewModel()
+    
     var body: some View {
         VStack {
             Image("avatar")
                 .resizable()
                 .frame(width: 80, height: 80)
                 .clipShape(Circle())
-            Text("Hey, Cheyzie!")
-                .font(.custom("WorkSans-SemiBold", size: 24))
-                .foregroundColor(.customHaiti)
-            Text("\(viewModel.uncompletedTasks) Task\(viewModel.uncompletedTasks == 1 ? "" : "s")")
-                .font(.custom("WorkSans-Medium", size: 16))
-                .foregroundColor(.customShadow)
-                .padding(.top, 1)
+            
+            HStack {
+                Text("Hey, \(viewModel.user?.displayName ?? "you")!")
+                    .font(.custom("WorkSans-SemiBold", size: 24))
+                    .foregroundColor(.customHaiti)
+            }
         }
     }
 }
@@ -29,6 +29,5 @@ struct ListGreeter: View {
 struct ListGreeter_Previews: PreviewProvider {
     static var previews: some View {
         ListGreeter()
-            .environmentObject(ToDoListViewModel())
     }
 }

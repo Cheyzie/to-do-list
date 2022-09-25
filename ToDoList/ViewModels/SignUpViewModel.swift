@@ -12,6 +12,7 @@ import Combine
 class SignUpViewModel: ObservableObject {
     var authService: AuthServiceProtocol
     
+    @Published var username: String = ""
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var passwordConfirmation: String = ""
@@ -32,10 +33,20 @@ class SignUpViewModel: ObservableObject {
     }
     
     func signUp() {
-        if password == passwordConfirmation {
-            authService.signUp(email: email, password: password)
-        } else {
-            errMsg = "Password not match."
+        if formValidation() {
+            authService.signUp(username: username, email: email, password: password)
         }
+    }
+    
+    func formValidation() -> Bool {
+        if username.isEmpty || email.isEmpty || password.isEmpty || passwordConfirmation.isEmpty {
+            errMsg = "Fill in all fields"
+            return false
+        }
+        if password != passwordConfirmation {
+            errMsg = "Password not match."
+            return false
+        }
+        return true
     }
 }

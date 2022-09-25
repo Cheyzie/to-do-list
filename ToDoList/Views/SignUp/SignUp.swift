@@ -20,6 +20,14 @@ struct SignUp: View {
                 Text("Sign Up")
                     .font(.custom("WorkSans-Bold", size: 22))
                 Group {
+                    CustomTextField(text: $viewModel.username) {
+                        HStack {
+                            Image("User")
+                                .foregroundColor(.customBlue)
+                            Text("Username")
+                                .foregroundColor(.customHaiti)
+                        }
+                    }
                     CustomTextField(text: $viewModel.email) {
                         HStack {
                             Image("Message")
@@ -46,9 +54,10 @@ struct SignUp: View {
                     }
                 }
                 Text(viewModel.errMsg)
-                    .padding()
+                    .padding(.horizontal)
+                    .frame(height: 65, alignment: .center)
                     .fixedSize(horizontal: false, vertical: true)
-                    .font(.custom("WorkSans-Medium", size: 20))
+                    .font(.custom("WorkSans-Medium", size: 16))
                     .foregroundColor(.customRed)
                 Button {
                     viewModel.signUp()
@@ -77,15 +86,6 @@ struct SignUp: View {
                     }
                 }
                 .padding()
-                NavigationLink(
-                    isActive: $viewModel.isAuth,
-                    destination: {
-                        ToDoList()
-                            .navigationBarHidden(true)
-                        
-                    },
-                    label: {}
-                )
                 Spacer()
             }
             .padding(20)
