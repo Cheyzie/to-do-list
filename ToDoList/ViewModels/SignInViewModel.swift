@@ -6,13 +6,31 @@
 //
 
 import Foundation
+import Combine
 
 class SignInViewModel: ObservableObject {
+    var authService: AuthServiceProtocol
+    
     @Published var email: String = ""
     @Published var password: String = ""
-    @Published var login: Bool = false
+    
+    @Published var isAuth: Bool = false
+    @Published var errMsg: String = ""
+    
+    private var cancellable = Set<AnyCancellable>()
+    
+    init(authService: AuthServiceProtocol = FirebaseAuthService.shared) {
+        self.authService = authService
+        
+        authService.errMsg.sink { errMsg in
+            self.errMsg = errMsg
+        }.store(in: &cancellable)
+        authService.isAuth.sink { isAuth in
+            self.isAuth = isAuth
+        }.store(in: &cancellable)
+    }
     
     func signIn() {
-        self.login = true
+        authService.signIn(email: email, password: password)
     }
 }

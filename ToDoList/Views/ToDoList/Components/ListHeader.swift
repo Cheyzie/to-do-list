@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ListHeader: View {
     @State private var showSearchForm = false
@@ -14,6 +15,8 @@ struct ListHeader: View {
     var body: some View {
         HStack {
             Text("ToDo")
+                .font(.custom("WorkSans-Bold", size: 28))
+                .foregroundColor(.customHaiti)
             Spacer()
             if !showSearchForm {
                 if searchQuery.isEmpty {
@@ -67,6 +70,11 @@ struct ListHeader: View {
         }
         .font(.custom("WorkSans-Bold", size: 24))
         .padding(16)
+        .padding(.top, 24)
+        .background {
+            Rectangle()
+                .foregroundColor(.customGreen)
+        }
     }
 }
 

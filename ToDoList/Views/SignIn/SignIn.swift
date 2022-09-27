@@ -35,6 +35,12 @@ struct SignIn: View {
                             .foregroundColor(.customHaiti)
                     }
                 }
+                Text(viewModel.errMsg)
+                    .padding(.horizontal)
+                    .frame(height: 65, alignment: .center)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .font(.custom("WorkSans-Medium", size: 16))
+                    .foregroundColor(.customRed)
                 Button {
                     viewModel.signIn()
                 } label: {
@@ -62,14 +68,6 @@ struct SignIn: View {
                             .foregroundColor(.white)
                     }
                 }
-                NavigationLink(
-                    isActive: $viewModel.login,
-                    destination: {
-                        ToDoList()
-                            .navigationBarHidden(true)
-                    },
-                    label: {}
-                )
                 Spacer()
             }
             .frame(maxHeight: .infinity)

@@ -13,11 +13,22 @@ struct SignUp: View {
     var body: some View {
         NavigationView {
             VStack {
+                Spacer()
                 Image("Auth")
+                    .padding()
                 Spacer()
                 Text("Sign Up")
                     .font(.custom("WorkSans-Bold", size: 22))
-                CustomTextField(text: $viewModel.email) {
+                Group {
+                    CustomTextField(text: $viewModel.username) {
+                        HStack {
+                            Image("User")
+                                .foregroundColor(.customBlue)
+                            Text("Username")
+                                .foregroundColor(.customHaiti)
+                        }
+                    }
+                    CustomTextField(text: $viewModel.email) {
                         HStack {
                             Image("Message")
                                 .foregroundColor(.customBlue)
@@ -25,7 +36,7 @@ struct SignUp: View {
                                 .foregroundColor(.customHaiti)
                         }
                     }
-                CustomSecuredField(text: $viewModel.password) {
+                    CustomSecuredField(text: $viewModel.password) {
                         HStack {
                             Image("Lock")
                                 .foregroundColor(.customBlue)
@@ -33,7 +44,7 @@ struct SignUp: View {
                                 .foregroundColor(.customHaiti)
                         }
                     }
-                CustomSecuredField(text: $viewModel.passwordConfirmation) {
+                    CustomSecuredField(text: $viewModel.passwordConfirmation) {
                         HStack {
                             Image("Lock")
                                 .foregroundColor(.customBlue)
@@ -41,7 +52,13 @@ struct SignUp: View {
                                 .foregroundColor(.customHaiti)
                         }
                     }
-                
+                }
+                Text(viewModel.errMsg)
+                    .padding(.horizontal)
+                    .frame(height: 65, alignment: .center)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .font(.custom("WorkSans-Medium", size: 16))
+                    .foregroundColor(.customRed)
                 Button {
                     viewModel.signUp()
                 } label: {
@@ -55,7 +72,6 @@ struct SignUp: View {
                                 .shadow(radius: 5)
                         }
                 }
-                .padding(.vertical, 30)
                 HStack {
                     Text("Don't have an account?")
                         .font(.custom("WorkSans-SemiBold", size: 12))
@@ -69,18 +85,11 @@ struct SignUp: View {
                             .foregroundColor(.customBlue)
                     }
                 }
-                NavigationLink(
-                    isActive: $viewModel.isAuth,
-                    destination: {
-                        ToDoList()
-                            .navigationBarHidden(true)
-                        
-                    },
-                    label: {}
-                )
+                .padding()
                 Spacer()
             }
-            .padding()
+            .padding(20)
+            .ignoresSafeArea()
         }
     }
 }
