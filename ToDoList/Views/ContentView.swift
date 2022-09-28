@@ -9,8 +9,14 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    @StateObject var viewModel = UserStateViewModel()
+    
     var body: some View {
-        Welcome()
+        if viewModel.isAuth {
+            ToDoList()
+        } else {
+            Welcome()
+        }
     }
 }
 

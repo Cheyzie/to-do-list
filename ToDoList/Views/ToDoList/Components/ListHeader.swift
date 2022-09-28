@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ListHeader: View {
     @State private var showSearchForm = false
@@ -14,6 +15,8 @@ struct ListHeader: View {
     var body: some View {
         HStack {
             Text("ToDo")
+                .font(.custom("WorkSans-Bold", size: 28))
+                .foregroundColor(.customHaiti)
             Spacer()
             if !showSearchForm {
                 if searchQuery.isEmpty {
@@ -21,25 +24,25 @@ struct ListHeader: View {
                         showSearchForm.toggle()
                     } label: {
                         Image(systemName: "magnifyingglass")
-                            .foregroundColor(Color("Haiti"))
+                            .foregroundColor(.customHaiti)
                     }
                 } else {
                     HStack {
                         Text(searchQuery)
                             .font(.custom("WorkSans-Medium", size: 24))
-                            .foregroundColor(Color("Grey"))
+                            .foregroundColor(.customGrey)
                         Button {
                             searchQuery = ""
                         } label: {
                             Image(systemName: "plus")
-                                .foregroundColor(Color("Red"))
+                                .foregroundColor(.customRed)
                                 .rotationEffect(.degrees(45))
                         }
                     }
                     .padding(.horizontal)
                     .background {
                         RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(Color("LightGrey"))
+                            .foregroundColor(.customLightGrey)
                     }
                 }
             } else {
@@ -55,18 +58,23 @@ struct ListHeader: View {
                         showSearchForm.toggle()
                     } label: {
                         Image(systemName: "plus")
-                            .foregroundColor(Color("Red"))
+                            .foregroundColor(.customRed)
                             .rotationEffect(.degrees(45))
                     }
                 }
                 .background {
                     RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(Color("LightGrey"))
+                        .foregroundColor(.customLightGrey)
                 }
             }
         }
         .font(.custom("WorkSans-Bold", size: 24))
         .padding(16)
+        .padding(.top, 24)
+        .background {
+            Rectangle()
+                .foregroundColor(.customGreen)
+        }
     }
 }
 

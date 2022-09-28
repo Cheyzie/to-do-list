@@ -9,15 +9,15 @@ import Foundation
 import Combine
 
 protocol ToDoDataServiceProtocol {
-    var toDoItems: CurrentValueSubject<[ToDoEntity], Never> { get }
+    var toDoItems: CurrentValueSubject<[Todo], Never> { get }
     
     func add(text: String)
-    func update(withId id: UUID, text: String?, isDone: Bool?)
-    func delete(id: UUID)
+    func update(withId id: String, text: String?, isDone: Bool?)
+    func delete(id: String)
 }
 
 extension ToDoDataServiceProtocol {
-    func update(withId id: UUID, text: String? = nil, isDone: Bool? = nil) {
+    func update(withId id: String, text: String? = nil, isDone: Bool? = nil) {
         update(withId: id, text: text, isDone: isDone)
     }
 }

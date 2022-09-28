@@ -14,50 +14,63 @@ struct Welcome: View {
                 ZStack {
                     Circle()
                         .frame(width: 2 * geometry.size.width, height: 2 * geometry.size.width)
-                        .foregroundColor(Color("Blue"))
+                        .foregroundColor(.customBlue)
                         .position(x: 0.25 * geometry.size.width, y: -0.35 * geometry.size.width)
-                    VStack {
-                        Spacer()
+                    VStack(alignment: .center) {
                         Image("Welcome")
                             .resizable()
                             .frame(width: 0.45 * geometry.size.width, height: 0.45 * geometry.size.width)
-                            .padding(45)
+                            .padding(0.15 * geometry.size.width)
                             .background {
                                 Circle()
                                     .foregroundColor(.white)
                                     .shadow(radius: 5)
                         }
+                            .padding(.top, 30)
                         Text("Start enjoying a more organized life")
                             .font(.custom("WorkSans-Bold", size: 35))
-                            .multilineTextAlignment(.center)
+                            .padding(.vertical, 10)
                         Text("Plan, organize, track, in one visual, collaborative space")
                             .font(.custom("WorkSans-Medium", size: 20))
-                            .foregroundColor(Color("Grey"))
-                            .multilineTextAlignment(.center)
-                            .padding(.top, 0.5)
-                        Spacer()
-                        NavigationLink {
-                            ToDoList()
-                                .navigationBarHidden(true)
-                        } label: {
-                            Text("Get started")
-                                .font(.custom("WorkSans-Bold", size: 18))
-                                .foregroundColor(.white)
-                                .frame(width: 183, height: 55, alignment: .center)
-                                .background {
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .foregroundColor(Color("Blue"))
-                                }
+                            .foregroundColor(.customGrey)
+                            .padding(.vertical, 5)
+                        HStack {
+                            NavigationLink {
+                                SignIn()
+                                    .navigationBarHidden(true)
+                            } label: {
+                                Text("Sign In")
+                                    .font(.custom("WorkSans-Bold", size: 18))
+                                    .foregroundColor(.white)
+                                    .frame(width: 0.47 * geometry.size.width, height: 55, alignment: .center)
+                                    .background {
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .foregroundColor(.customBlue)
+                                    }
+                            }
+                            NavigationLink {
+                                SignUp()
+                                    .navigationBarHidden(true)
+                            } label: {
+                                Text("Sign Up")
+                                    .font(.custom("WorkSans-Bold", size: 18))
+                                    .foregroundColor(.customBlue)
+                                    .frame(width: 0.46 * geometry.size.width, height: 54, alignment: .center)
+                                    .background {
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(lineWidth: 3)
+                                            .foregroundColor(.customBlue)
+                                    }
+                            }
                         }
-                        .padding(.vertical, 20)
-                        Spacer()
+                        .padding(.vertical, 50)
                     }
+                    .multilineTextAlignment(.center)
                     .padding(.horizontal, 3)
                 }
                 .ignoresSafeArea()
             }
         }
-        .navigationBarHidden(true)
     }
 }
 
