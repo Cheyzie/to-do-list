@@ -12,23 +12,23 @@ class ToDoListViewModel: ObservableObject {
     
     private let toDoDataService: ToDoDataServiceProtocol
     
-    @Published var toDoItems: [ToDoEntity] = []
+    @Published var toDoItems: [Todo] = []
     @Published var searchQuery = ""
     
     var uncompletedTasks: Int {
         filteredToDoItems.filter{ !$0.isDone }.count
     }
-    var filteredToDoItems: [ToDoEntity] {
+    var filteredToDoItems: [Todo] {
         if searchQuery.isEmpty {
             return toDoItems
         } else {
-            return toDoItems.filter({$0.text?.lowercased().contains(searchQuery.lowercased()) ?? false})
+            return toDoItems.filter({$0.text.lowercased().contains(searchQuery.lowercased())})
         }
     }
     
     private var cancellable = Set<AnyCancellable>()
     
-    init(toDoDataService: ToDoDataServiceProtocol = ToDoDataService.shared) {
+    init(toDoDataService: ToDoDataServiceProtocol = ToDoFirebaseDataService.shared) {
         self.toDoDataService = toDoDataService
         toDoDataService.toDoItems.sink { toDoItems in
             self.toDoItems = toDoItems
@@ -39,14 +39,14 @@ class ToDoListViewModel: ObservableObject {
         toDoDataService.add(text: text)
     }
     
-    func toggle(toDo: ToDoEntity) {
+    func toggle(toDo: Todo) {
         toDoDataService.update(
-            withId: toDo.id!,
+            withId: toDo.id,
             isDone: !toDo.isDone
         )
     }
     
-    func delete(toDo: ToDoEntity) {
-        toDoDataService.delete(id: toDo.id!)
+    func delete(toDo: Todo) {
+        toDoDataService.delete(id: toDo.id)
     }
 }

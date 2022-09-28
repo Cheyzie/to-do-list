@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ToDoItem: View {
     @EnvironmentObject var viewModel: ToDoListViewModel
-    var toDo: ToDoEntity
+    var toDo: Todo
     @State private var offset = CGSize.zero
     
     var body: some View {
@@ -35,7 +35,7 @@ struct ToDoItem: View {
                     viewModel.toggle(toDo: toDo)
                 }
                     .padding(.leading)
-                Text(toDo.text ?? "")
+                Text(toDo.text)
                     .font(.custom(
                         toDo.isDone ? "WorkSans-SemiBold" : "WorkSans-Medium",
                         size: 20)
